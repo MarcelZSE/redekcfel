@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galeria + Filmy</title>
   <style>
-    body {
+     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
       background: #f0f0f0;
@@ -80,6 +80,16 @@
       box-shadow: 0 12px 25px rgba(0,0,0,0.4);
     }
 
+    /* Tekst przed filmami */
+    .videos-title {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      margin: 40px 0 20px 0;
+      color: #e74c3c; /* wyraźny czerwony */
+      text-transform: uppercase;
+    }
+
     /* Sekcja biografii */
     .bio {
       max-width: 900px;
@@ -115,6 +125,9 @@
       .gallery a, .videos a img {
         height: 150px;
       }
+      .videos-title {
+        font-size: 22px;
+      }
       .bio h2 {
         font-size: 24px;
       }
@@ -125,13 +138,12 @@
   </style>
 </head>
 <body>
-
 <header>
   <div class="logo">redekcfel</div>
 </header>
 
-<!-- Galeria z linkami do YouTube -->
-  KLIKNIJ KUUURWA W JAKIES ZDJECIE!!<br>
+<!-- Tekst przed miniaturami wideo -->
+<div class="videos-title">KLIKNIJ KUUURWA W JAKIES ZDJECIE!!</div>
 <section class="gallery">
   <a href="https://www.youtube.com/watch?v=uAAjNI-Yj4Y" target="_blank">
     <img src="2f1034d8-793f-45b8-871b-3d7f4182b456.jpg" alt="Film 1">
