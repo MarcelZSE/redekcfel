@@ -35,7 +35,7 @@
       padding: 0 20px;
     }
 
-    /* Galeria - równe wymiary zdjęć */
+    /* Galeria z równymi zdjęciami */
     .gallery {
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
@@ -43,7 +43,7 @@
     .gallery a {
       display: block;
       width: 100%;
-      height: 200px; /* stała wysokość */
+      height: 200px;
       overflow: hidden;
       border-radius: 15px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.3);
@@ -58,11 +58,11 @@
     .gallery img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* dopasowanie i przycięcie */
+      object-fit: cover;
       display: block;
     }
 
-    /* Sekcja wideo jako miniatury (opcjonalnie) */
+    /* Sekcja miniatur wideo */
     .videos {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
@@ -80,6 +80,29 @@
       box-shadow: 0 12px 25px rgba(0,0,0,0.4);
     }
 
+    /* Sekcja biografii */
+    .bio {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px 20px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    .bio h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #1c1c1c;
+    }
+
+    .bio p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #555;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -91,6 +114,12 @@
     @media (max-width: 600px) {
       .gallery a, .videos a img {
         height: 150px;
+      }
+      .bio h2 {
+        font-size: 24px;
+      }
+      .bio p {
+        font-size: 16px;
       }
     }
   </style>
@@ -116,7 +145,17 @@
     <img src="elo (3).jpg" alt="Film 4">
   </a>
 </section>
-
+<!-- Biografia Redka -->
+<section class="bio">
+  <h2>O Redku 🥀</h2>
+  <p>
+    Redek to człowiek z pasją do tworzenia i eksplorowania świata online.  
+    Uwielbia dzielić się swoimi pomysłami, tworzyć wideo i zdjęcia, a przy tym  
+    zawsze potrafi wprowadzić luz i pozytywny vibe.  
+    Jego galeria i filmy pokazują kreatywność i unikalny styl, który wyróżnia go w sieci.  
+    Jeżeli chcesz poznać go bliżej – kliknij w zdjęcia i zobacz jego filmy!  
+  </p>
+</section>
 <footer>
   &copy; 2025 Redekcfel. Wszystkie prawa zastrzeżone.
 </footer>
