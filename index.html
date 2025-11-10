@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galeria test</title>
+  <title>Galeria + YouTube</title>
   <style>
     body {
       margin: 0;
@@ -34,6 +34,20 @@
       border-radius: 12px;
       object-fit: cover;
     }
+    .videos {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+    .videos iframe {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border: none;
+      border-radius: 12px;
+    }
   </style>
 </head>
 <body>
@@ -49,5 +63,11 @@
   <img src="elo (3).jpg" alt="">
 </section>
 
+<section class="videos">
+  <iframe src="https://www.youtube.com/watch?v=uAAjNI-Yj4Y" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/watch?v=ToWKO4c6jLkQ" allowfullscreen></iframe>
+</section>
+
 </body>
 </html>
+
