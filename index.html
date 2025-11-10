@@ -3,50 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galeria + YouTube</title>
+  <title>Galeria + Filmy</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      font-family: 'Arial', sans-serif;
+      background: #f0f0f0;
+      color: #333;
     }
+
     header {
       display: flex;
       align-items: center;
-      padding: 20px;
-      background: #111;
+      padding: 20px 40px;
+      background: #1c1c1c;
       color: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
+
     header .logo {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: bold;
+      letter-spacing: 2px;
     }
-    .gallery {
-      max-width: 1100px;
-      margin: 40px auto;
+
+    .gallery, .videos {
+      max-width: 1200px;
+      margin: 50px auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
       padding: 0 20px;
     }
+
+    /* Galeria - równe wymiary zdjęć */
+    .gallery {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .gallery a {
+      display: block;
+      width: 100%;
+      height: 200px; /* stała wysokość */
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+    }
+
     .gallery img {
       width: 100%;
-      border-radius: 12px;
-      object-fit: cover;
+      height: 100%;
+      object-fit: cover; /* dopasowanie i przycięcie */
+      display: block;
     }
+
+    /* Sekcja wideo jako miniatury (opcjonalnie) */
     .videos {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-      display: grid;
-      gap: 30px;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
-    .videos iframe {
+
+    .videos a img {
       width: 100%;
-      aspect-ratio: 16/9;
-      border: none;
-      border-radius: 12px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .videos a img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1c1c1c;
+      color: #fff;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 600px) {
+      .gallery a, .videos a img {
+        height: 150px;
+      }
     }
   </style>
 </head>
@@ -56,18 +101,25 @@
   <div class="logo">redekcfel</div>
 </header>
 
+<!-- Galeria z linkami do YouTube -->
 <section class="gallery">
-  <img src="2f1034d8-793f-45b8-871b-3d7f4182b456.jpg" alt="">
-  <img src="elo (1).jpg" alt="">
-  <img src="elo (2).jpg" alt="">
-  <img src="elo (3).jpg" alt="">
+  <a href="https://www.youtube.com/watch?v=uAAjNI-Yj4Y" target="_blank">
+    <img src="2f1034d8-793f-45b8-871b-3d7f4182b456.jpg" alt="Film 1">
+  </a>
+  <a href="https://www.youtube.com/watch?v=ToWKO4c6jLkQ" target="_blank">
+    <img src="elo (1).jpg" alt="Film 2">
+  </a>
+  <a href="https://www.youtube.com/watch?v=R0skIJB7FNs" target="_blank">
+    <img src="elo (2).jpg" alt="Film 3">
+  </a>
+  <a href="https://www.youtube.com/watch?v=LPTb3NIHQcU" target="_blank">
+    <img src="elo (3).jpg" alt="Film 4">
+  </a>
 </section>
-<section class="videos">
-        <iframe src="https://www.youtube.com/watch?v=uAAjNI-Yj4Y" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/watch?v=ToWKO4c6jLkQ" allowfullscreen></iframe>
-        <!-- dodaj kolejne iframe z innymi filmami -->
-    </section>
+
+<footer>
+  &copy; 2025 Redekcfel. Wszystkie prawa zastrzeżone.
+</footer>
 
 </body>
 </html>
-
